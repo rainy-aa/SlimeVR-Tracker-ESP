@@ -26,16 +26,16 @@
 // ================================================
 
 // Set parameters of IMU and board used
-#define IMU IMU_BNO085
+#define IMU IMU_LSM6DSV
 #define SECOND_IMU IMU
-#define BOARD BOARD_SLIMEVR
-#define IMU_ROTATION DEG_270
-#define SECOND_IMU_ROTATION DEG_270
+#define BOARD BOARD_CHEESECAKE
+#define IMU_ROTATION DEG_90
+#define SECOND_IMU_ROTATION DEG_90
 
 #define PRIMARY_IMU_OPTIONAL false
 #define SECONDARY_IMU_OPTIONAL true
 
-#define MAX_IMU_COUNT 2
+#define MAX_IMU_COUNT 1
 
 // Axis mapping example
 /*
@@ -133,7 +133,7 @@ PIN_IMU_SDA, PRIMARY_IMU_OPTIONAL, BMI160_QMC_REMAP) \
 #ifndef BATTERY_SHIELD_R2
 #define BATTERY_SHIELD_R2 40.2
 #endif
-#elif BOARD == BOARD_NODEMCU || BOARD == BOARD_WEMOSD1MINI
+#elif BOARD == BOARD_NODEMCU || BOARD == BOARD_WEMOSD1MINI || BOARD == BOARD_CHEESECAKE
 #define PIN_IMU_SDA D2
 #define PIN_IMU_SCL D1
 #define PIN_IMU_INT D5
